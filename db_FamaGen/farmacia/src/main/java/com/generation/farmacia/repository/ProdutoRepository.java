@@ -14,6 +14,6 @@ import com.generation.farmacia.model.ProdutoModel;
 //  A CADA CLASSE CRIADA NA MODEL ELE CRIA UM REPOSITORY
 
 public interface ProdutoRepository extends JpaRepository <ProdutoModel,Long> { 
-	public List<ProdutoModel> buscarProdutosEntre (@Param("inicio") BigDecimal inicio, @Param("fim") BigDecimal fim);
+	public List<ProdutoModel> findByPrecoBetween (@Param("inicio") BigDecimal inicio, @Param("fim") BigDecimal fim);
 
 }
